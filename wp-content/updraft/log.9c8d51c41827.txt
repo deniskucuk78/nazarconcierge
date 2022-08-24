@@ -1,0 +1,418 @@
+0000.000 (0) Opened log file at time: Mon, 22 Aug 2022 08:07:44 +0000 on https://nazarconcierge.fr
+0000.004 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.22.12 WP: 6.0.1 PHP: 8.0.22 (cgi-fcgi, Linux info 3.0 #1337 SMP Tue Jan 01 00:00:00 CEST 2000 all GNU/Linux) MySQL: 10.5.15-MariaDB-1:10.5.15+maria~bullseye-log (max packet size=67108864) WPLANG: fr_FR Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 69.8M | 72M) multisite: N openssl: OpenSSL 1.1.1n  15 Mar 2022 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.005 (0) Free space on disk containing Updraft's temporary directory: 1299403.2 MB
+0000.028 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.030 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.082 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1661072665, seconds_ago=83000)
+0000.088 (0) Set semaphore last lock (fd) time to 2022-08-22 08:07:45
+0000.090 (0) Semaphore lock (fd) complete
+0000.096 (0) Backup run: resumption=0, nonce=9c8d51c41827, file_nonce=9c8d51c41827 begun at=1661155664 (1s ago), job type=backup
+0000.101 (0) Scheduling a resumption (1) after 300 seconds (1661155965) in case this run gets aborted
+0000.161 (0) Checking if we have a zip executable available
+0000.163 (0) Testing: /usr/bin/zip
+0000.173 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.175 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.177 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.178 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.180 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.189 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.191 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.223 (0) Working binary zip found: /usr/bin/zip
+0000.227 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.229 (0) Creation of backups of directories: beginning
+0000.235 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0011.187 (0) Total entities for the zip file: 1056 directories, 5950 files (0 skipped as non-modified), 104.7 MB
+0011.190 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0011.225 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: size is now: 0.20 MB
+0011.231 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 100 files added (on-disk size: 232.2 KB)
+0011.234 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 200 files added (on-disk size: 232.2 KB)
+0011.237 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 300 files added (on-disk size: 232.2 KB)
+0011.241 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 400 files added (on-disk size: 232.2 KB)
+0011.244 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 500 files added (on-disk size: 232.2 KB)
+0011.247 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 600 files added (on-disk size: 232.2 KB)
+0011.250 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 700 files added (on-disk size: 232.2 KB)
+0011.253 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 800 files added (on-disk size: 232.2 KB)
+0011.256 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 900 files added (on-disk size: 232.2 KB)
+0011.259 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1000 files added (on-disk size: 232.2 KB)
+0011.262 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (19.1 MB, 5950 files batched, 1001 (1002) added so far); re-opening (prior size: 232.2 KB)
+0018.555 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: size is now: 5.60 MB
+0018.564 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1100 files added (on-disk size: 5751.8 KB)
+0018.569 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1200 files added (on-disk size: 5751.8 KB)
+0018.572 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1300 files added (on-disk size: 5751.8 KB)
+0018.576 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25 MB, 5950 files batched, 326 (1328) added so far); re-opening (prior size: 5751.8 KB)
+0021.861 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: size is now: 12.20 MB
+0021.867 (0) A useful amount of data was added after this amount of zip processing: 3.9 s (normalised: 3.9 s, rate: 6636.2 KB/s)
+0021.871 (0) Performance is good - will increase the amount of data we attempt to batch (time=3.8612880706787, normalised_time=3.857636071991, max_time=21.868502140045, data points known=1, old_max_bytes=26214400, new_max_bytes=89163879)
+0021.875 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1400 files added (on-disk size: 12531.9 KB)
+0021.878 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1500 files added (on-disk size: 12531.9 KB)
+0021.881 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1600 files added (on-disk size: 12531.9 KB)
+0021.884 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1700 files added (on-disk size: 12531.9 KB)
+0021.887 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1800 files added (on-disk size: 12531.9 KB)
+0021.890 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 1900 files added (on-disk size: 12531.9 KB)
+0021.893 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2000 files added (on-disk size: 12531.9 KB)
+0021.896 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2100 files added (on-disk size: 12531.9 KB)
+0021.900 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2200 files added (on-disk size: 12531.9 KB)
+0021.903 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2300 files added (on-disk size: 12531.9 KB)
+0021.906 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (10.6 MB, 5950 files batched, 1001 (2329) added so far); re-opening (prior size: 12531.9 KB)
+0030.387 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: size is now: 16.20 MB
+0030.393 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2400 files added (on-disk size: 16600 KB)
+0030.396 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2500 files added (on-disk size: 16600 KB)
+0030.400 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2600 files added (on-disk size: 16600 KB)
+0030.403 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2700 files added (on-disk size: 16600 KB)
+0030.406 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2800 files added (on-disk size: 16600 KB)
+0030.410 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 2900 files added (on-disk size: 16600 KB)
+0030.413 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3000 files added (on-disk size: 16600 KB)
+0030.417 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3100 files added (on-disk size: 16600 KB)
+0030.421 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3200 files added (on-disk size: 16600 KB)
+0030.425 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3300 files added (on-disk size: 16600 KB)
+0030.428 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (21.5 MB, 5950 files batched, 1001 (3330) added so far); re-opening (prior size: 16600 KB)
+0038.764 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: size is now: 22.30 MB
+0038.770 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3400 files added (on-disk size: 22819.3 KB)
+0038.773 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3500 files added (on-disk size: 22819.3 KB)
+0038.776 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3600 files added (on-disk size: 22819.3 KB)
+0038.779 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3700 files added (on-disk size: 22819.3 KB)
+0038.782 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3800 files added (on-disk size: 22819.3 KB)
+0038.785 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 3900 files added (on-disk size: 22819.3 KB)
+0038.788 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4000 files added (on-disk size: 22819.3 KB)
+0038.791 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4100 files added (on-disk size: 22819.3 KB)
+0038.794 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4200 files added (on-disk size: 22819.3 KB)
+0038.797 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4300 files added (on-disk size: 22819.3 KB)
+0038.799 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (6.7 MB, 5950 files batched, 1001 (4331) added so far); re-opening (prior size: 22819.3 KB)
+0045.355 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4400 files added (on-disk size: 25076.5 KB)
+0045.358 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4500 files added (on-disk size: 25076.5 KB)
+0045.361 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4600 files added (on-disk size: 25076.5 KB)
+0045.364 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4700 files added (on-disk size: 25076.5 KB)
+0045.367 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4800 files added (on-disk size: 25076.5 KB)
+0045.372 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 4900 files added (on-disk size: 25076.5 KB)
+0045.377 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5000 files added (on-disk size: 25076.5 KB)
+0045.381 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5100 files added (on-disk size: 25076.5 KB)
+0045.383 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5200 files added (on-disk size: 25076.5 KB)
+0045.386 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5300 files added (on-disk size: 25076.5 KB)
+0045.388 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (9.9 MB, 5950 files batched, 1001 (5332) added so far); re-opening (prior size: 25076.5 KB)
+0051.465 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5400 files added (on-disk size: 28068.8 KB)
+0051.469 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5500 files added (on-disk size: 28068.8 KB)
+0051.472 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5600 files added (on-disk size: 28068.8 KB)
+0051.475 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5700 files added (on-disk size: 28068.8 KB)
+0051.478 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5800 files added (on-disk size: 28068.8 KB)
+0051.481 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.tmp: 5900 files added (on-disk size: 28068.8 KB)
+0055.822 (0) Creating zip file manifest (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.list-temp.tmp)
+0055.850 (0) Successfully created zip file manifest (size: 477944)
+0056.097 (0) Created plugins zip (0) - 32564.7 KB in 55.9 s (583 KB/s) (sha1: 6dccb4e669d3a3a3ea62fd18cc99dac31abd2027, sha256: 234ff9863d2544bc1ff0fa41375f3c0491f191422cba94ef85b58e639f405254)
+0056.101 (0) Beginning creation of dump of themes (split every: 400 MB)
+0057.662 (0) Total entities for the zip file: 138 directories, 778 files (0 skipped as non-modified), 20.2 MB
+0057.667 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0057.671 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0057.674 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0057.677 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0057.680 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0057.684 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.tmp: 600 files added (on-disk size: 0 KB)
+0057.687 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.tmp: 700 files added (on-disk size: 0 KB)
+0063.103 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.tmp: size is now: 6.70 MB
+0063.115 (0) Creating zip file manifest (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.list-temp.tmp)
+0063.119 (0) Successfully created zip file manifest (size: 54286)
+0063.179 (0) Created themes zip (0) - 6877 KB in 7.1 s (971.9 KB/s) (sha1: dfe53dcf556e839bf7a9a20a1aad1e4efee3364f, sha256: c79886500d6d9c1656c7e66c36a4eac456b5da3feb5334939ac776c1a8f0ded5)
+0063.184 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0063.186 (0) Looking for candidates to backup in: /homepages/5/d914475104/htdocs/clickandbuilds/NazarConcierge/wp-content/uploads
+0063.188 (0) finding files: 2022: adding to list (1)
+0063.190 (0) finding files: elementor: adding to list (2)
+0063.192 (0) finding files: oceanwp: adding to list (3)
+0063.195 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0063.411 (0) Total entities for the zip file: 7 directories, 250 files (0 skipped as non-modified), 27.3 MB
+0063.416 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0063.419 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0064.689 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip.tmp: size is now: 27.30 MB
+0064.696 (0) Creating zip file manifest (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip.list-temp.tmp)
+0064.699 (0) Successfully created zip file manifest (size: 13263)
+0064.911 (0) Created uploads zip (0) - 27945 KB in 1.7 s (16323.1 KB/s) (sha1: cae0b021a525453fa1a6a826e990d95b12923acf, sha256: b51794c76e52113d90bec8afdd8261cf38197cb4b2adfe2a111df7b58bc90cf4)
+0064.915 (0) Beginning backup of other directories found in the content directory (index: 0)
+0064.917 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0064.918 (0) Looking for candidates to backup in: /homepages/5/d914475104/htdocs/clickandbuilds/NazarConcierge/wp-content
+0064.920 (0) finding files: index.php: adding to list (1)
+0064.922 (0) finding files: plugins: skipping: this is the plugins directory
+0064.923 (0) finding files: themes: skipping: this is the themes directory
+0064.925 (0) finding files: php.ini: adding to list (2)
+0064.927 (0) finding files: mu-plugins: adding to list (3)
+0064.928 (0) finding files: uploads: skipping: this is the uploads directory
+0064.930 (0) finding files: upgrade: skipping: excluded by options
+0064.931 (0) finding files: languages: adding to list (4)
+0064.933 (0) finding files: ngg: adding to list (5)
+0064.934 (0) finding files: gallery: adding to list (6)
+0064.936 (0) finding files: cache: skipping: excluded by options
+0064.938 (0) finding files: updraft: skipping: this is the updraft directory
+0064.961 (0) Total entities for the zip file: 6 directories, 141 files (0 skipped as non-modified), 5.4 MB
+0064.964 (0) Zip: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip.tmp: 100 files added (on-disk size: 0 KB)
+0065.898 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip.tmp: size is now: 1.50 MB
+0065.904 (0) Creating zip file manifest (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip.list-temp.tmp)
+0065.906 (0) Successfully created zip file manifest (size: 9582)
+0065.925 (0) Created others zip (0) - 1570.5 KB in 1 s (1594.1 KB/s) (sha1: 04136344b5f60309fe4ba5f4eb5b9d50c14154ef, sha256: e8e27a280e308f4f56d4a048122bfe74992d34e1cc20d8ae1045b51fdd4017c1)
+0065.938 (0) Saving backup status to database (elements: 8)
+0065.946 (0) Beginning creation of database dump (WordPress DB)
+0065.949 (0) Couldn't get the sql_mode value (N;); will not attempt any adjustment
+0065.957 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+0065.983 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `ThSeEsAOoptions`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */ (truncated - 1557 bytes total)
+0065.988 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0066.024 (0) Table ThSeEsAOoptions: Total expected rows (via COUNT): 311
+0066.029 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.081 (0) Table ThSeEsAOoptions: Rows added in this batch (next record: 12820): 307 (uncompressed bytes in this segment=1464129) in 0.07 seconds
+0066.091 (0) Table ThSeEsAOoptions: finishing file(s) (2, 242.5 KB)
+0066.097 (0) Table ThSeEsAOusers: Total expected rows (via COUNT): 1
+0066.099 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.106 (0) Table ThSeEsAOusers: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1419) in 0.01 seconds
+0066.114 (0) Table ThSeEsAOusers: finishing file(s) (2, 0.6 KB)
+0066.127 (0) Table ThSeEsAOusermeta: Total expected rows (via COUNT): 33
+0066.130 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.137 (0) Table ThSeEsAOusermeta: Rows added in this batch (next record: 35): 33 (uncompressed bytes in this segment=9602) in 0.02 seconds
+0066.150 (0) Table ThSeEsAOusermeta: finishing file(s) (2, 2.7 KB)
+0066.159 (0) Table ThSeEsAOcommentmeta: Total expected rows (via COUNT): 0
+0066.163 (0) Table ThSeEsAOcommentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=714) in 0.01 seconds
+0066.176 (0) Table ThSeEsAOcommentmeta: finishing file(s) (2, 0.4 KB)
+0066.184 (0) Table ThSeEsAOcomments: Total expected rows (via COUNT): 0
+0066.190 (0) Table ThSeEsAOcomments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1708) in 0.01 seconds
+0066.197 (0) Table ThSeEsAOcomments: finishing file(s) (2, 0.5 KB)
+0066.204 (0) Table ThSeEsAOlinks: Total expected rows (via COUNT): 0
+0066.207 (0) Table ThSeEsAOlinks: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1296) in 0.00 seconds
+0066.215 (0) Table ThSeEsAOlinks: finishing file(s) (2, 0.5 KB)
+0066.228 (0) Table ThSeEsAOpostmeta: Total expected rows (approximate): 4644
+0066.302 (0) Table ThSeEsAOpostmeta: Rows added in this batch (next record: 4944): 4435 (uncompressed bytes in this segment=3837217) in 0.08 seconds
+0066.314 (0) Table ThSeEsAOpostmeta: finishing file(s) (2, 85.7 KB)
+0066.328 (0) Table ThSeEsAOposts: Total expected rows (via COUNT): 729
+0066.365 (0) Table ThSeEsAOposts: Rows added in this batch (next record: 841): 729 (uncompressed bytes in this segment=915690) in 0.04 seconds
+0066.379 (0) Table ThSeEsAOposts: finishing file(s) (2, 69.4 KB)
+0066.387 (0) Table ThSeEsAOterm_relationships: Total expected rows (approximate): 45
+0066.392 (0) Table ThSeEsAOterm_relationships: Rows added in this batch (next record: 100000): 48 (uncompressed bytes in this segment=1389) in 0.01 seconds
+0066.399 (0) Table ThSeEsAOterm_relationships: finishing file(s) (2, 0.5 KB)
+0066.409 (0) Table ThSeEsAOterm_taxonomy: Total expected rows (via COUNT): 17
+0066.411 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.418 (0) Table ThSeEsAOterm_taxonomy: Rows added in this batch (next record: 17): 17 (uncompressed bytes in this segment=3109) in 0.01 seconds
+0066.430 (0) Table ThSeEsAOterm_taxonomy: finishing file(s) (2, 1.1 KB)
+0066.446 (0) Table ThSeEsAOtermmeta: Total expected rows (via COUNT): 48
+0066.448 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.455 (0) Table ThSeEsAOtermmeta: Rows added in this batch (next record: 48): 48 (uncompressed bytes in this segment=2637) in 0.01 seconds
+0066.466 (0) Table ThSeEsAOtermmeta: finishing file(s) (2, 0.8 KB)
+0066.477 (0) Table ThSeEsAOterms: Total expected rows (via COUNT): 17
+0066.480 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.491 (0) Table ThSeEsAOterms: Rows added in this batch (next record: 17): 17 (uncompressed bytes in this segment=1361) in 0.02 seconds
+0066.502 (0) Table ThSeEsAOterms: finishing file(s) (2, 0.7 KB)
+0066.509 (0) Table ThSeEsAOcli_cookie_scan: Total expected rows (via COUNT): 1
+0066.511 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.514 (0) Table ThSeEsAOcli_cookie_scan: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=890) in 0.01 seconds
+0066.521 (0) Table ThSeEsAOcli_cookie_scan: finishing file(s) (2, 0.4 KB)
+0066.536 (0) Table ThSeEsAOcli_cookie_scan_categories: Total expected rows (via COUNT): 1
+0066.538 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.541 (0) Table ThSeEsAOcli_cookie_scan_categories: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1059) in 0.01 seconds
+0066.549 (0) Table ThSeEsAOcli_cookie_scan_categories: finishing file(s) (2, 0.5 KB)
+0066.556 (0) Table ThSeEsAOcli_cookie_scan_cookies: Total expected rows (via COUNT): 7
+0066.558 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.561 (0) Table ThSeEsAOcli_cookie_scan_cookies: Rows added in this batch (next record: 7): 7 (uncompressed bytes in this segment=3023) in 0.01 seconds
+0066.569 (0) Table ThSeEsAOcli_cookie_scan_cookies: finishing file(s) (2, 0.8 KB)
+0066.576 (0) Table ThSeEsAOcli_cookie_scan_url: Total expected rows (via COUNT): 7
+0066.578 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.581 (0) Table ThSeEsAOcli_cookie_scan_url: Rows added in this batch (next record: 7): 7 (uncompressed bytes in this segment=1228) in 0.01 seconds
+0066.590 (0) Table ThSeEsAOcli_cookie_scan_url: finishing file(s) (2, 0.5 KB)
+0066.603 (0) Table ThSeEsAOcli_scripts: Total expected rows (via COUNT): 4
+0066.605 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.608 (0) Table ThSeEsAOcli_scripts: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=1468) in 0.01 seconds
+0066.621 (0) Table ThSeEsAOcli_scripts: finishing file(s) (2, 0.6 KB)
+0066.631 (0) Table ThSeEsAOe_events: Total expected rows (via COUNT): 13
+0066.634 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.639 (0) Table ThSeEsAOe_events: Rows added in this batch (next record: 13): 13 (uncompressed bytes in this segment=3211) in 0.01 seconds
+0066.647 (0) Table ThSeEsAOe_events: finishing file(s) (2, 0.7 KB)
+0066.662 (0) Table ThSeEsAOfrm_fields: Total expected rows (via COUNT): 12
+0066.664 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.669 (0) Table ThSeEsAOfrm_fields: Rows added in this batch (next record: 28): 12 (uncompressed bytes in this segment=43312) in 0.02 seconds
+0066.678 (0) Table ThSeEsAOfrm_fields: finishing file(s) (2, 12.6 KB)
+0066.687 (0) Table ThSeEsAOfrm_forms: Total expected rows (via COUNT): 1
+0066.689 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.692 (0) Table ThSeEsAOfrm_forms: Rows added in this batch (next record: 2): 1 (uncompressed bytes in this segment=3574) in 0.01 seconds
+0066.710 (0) Table ThSeEsAOfrm_forms: finishing file(s) (2, 1.5 KB)
+0066.725 (0) Table ThSeEsAOfrm_item_metas: Total expected rows (via COUNT): 201
+0066.728 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.735 (0) Table ThSeEsAOfrm_item_metas: Rows added in this batch (next record: 201): 201 (uncompressed bytes in this segment=12612) in 0.02 seconds
+0066.744 (0) Table ThSeEsAOfrm_item_metas: finishing file(s) (2, 2.4 KB)
+0066.750 (0) Table ThSeEsAOfrm_items: Total expected rows (via COUNT): 26
+0066.752 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.757 (0) Table ThSeEsAOfrm_items: Rows added in this batch (next record: 26): 26 (uncompressed bytes in this segment=10454) in 0.01 seconds
+0066.764 (0) Table ThSeEsAOfrm_items: finishing file(s) (2, 1.5 KB)
+0066.774 (0) Table ThSeEsAOyoast_indexable: Total expected rows (via COUNT): 132
+0066.776 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.786 (0) Table ThSeEsAOyoast_indexable: Rows added in this batch (next record: 180): 132 (uncompressed bytes in this segment=78723) in 0.02 seconds
+0066.796 (0) Table ThSeEsAOyoast_indexable: finishing file(s) (2, 10.9 KB)
+0066.804 (0) Table ThSeEsAOyoast_indexable_hierarchy: Total expected rows (approximate): 140
+0066.816 (0) Table ThSeEsAOyoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 106 (uncompressed bytes in this segment=2612) in 0.01 seconds
+0066.829 (0) Table ThSeEsAOyoast_indexable_hierarchy: finishing file(s) (2, 0.7 KB)
+0066.836 (0) Table ThSeEsAOyoast_migrations: Total expected rows (via COUNT): 23
+0066.838 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.843 (0) Table ThSeEsAOyoast_migrations: Rows added in this batch (next record: 23): 23 (uncompressed bytes in this segment=1285) in 0.01 seconds
+0066.850 (0) Table ThSeEsAOyoast_migrations: finishing file(s) (2, 0.6 KB)
+0066.856 (0) Table ThSeEsAOyoast_primary_term: Total expected rows (via COUNT): 5
+0066.858 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.861 (0) Table ThSeEsAOyoast_primary_term: Rows added in this batch (next record: 6): 5 (uncompressed bytes in this segment=1335) in 0.01 seconds
+0066.867 (0) Table ThSeEsAOyoast_primary_term: finishing file(s) (2, 0.6 KB)
+0066.873 (0) Table ThSeEsAOyoast_seo_links: Total expected rows (via COUNT): 38
+0066.875 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0066.883 (0) Table ThSeEsAOyoast_seo_links: Rows added in this batch (next record: 108): 38 (uncompressed bytes in this segment=7303) in 0.01 seconds
+0066.894 (0) Table ThSeEsAOyoast_seo_links: finishing file(s) (2, 1.7 KB)
+0066.898 (0) PHP event: code E_WARNING: filemtime(): stat failed for /homepages/5/d914475104/htdocs/clickandbuilds/NazarConcierge/wp-content/updraft/backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db.gz (line 1884, wp-content/plugins/updraftplus/backup.php)
+0066.903 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOoptions.table.tmpr12821.gz (1/27/fopen): adding to final database dump
+0066.909 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOoptions.table.gz (2/27/fopen): adding to final database dump
+0066.912 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOusers.table.tmpr2.gz (3/27/fopen): adding to final database dump
+0066.915 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOusers.table.gz (4/27/fopen): adding to final database dump
+0066.918 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOusermeta.table.tmpr36.gz (5/27/fopen): adding to final database dump
+0066.920 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOusermeta.table.gz (6/27/fopen): adding to final database dump
+0066.923 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcommentmeta.table.tmpr0.gz (7/27/fopen): adding to final database dump
+0066.926 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcommentmeta.table.gz (8/27/fopen): adding to final database dump
+0066.929 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcomments.table.tmpr0.gz (9/27/fopen): adding to final database dump
+0066.931 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcomments.table.gz (10/27/fopen): adding to final database dump
+0066.934 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOlinks.table.tmpr0.gz (11/27/fopen): adding to final database dump
+0066.937 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOlinks.table.gz (12/27/fopen): adding to final database dump
+0066.939 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOpostmeta.table.tmpr4945.gz (13/27/fopen): adding to final database dump
+0066.943 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOpostmeta.table.gz (14/27/fopen): adding to final database dump
+0066.945 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOposts.table.tmpr842.gz (15/27/fopen): adding to final database dump
+0066.948 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOposts.table.gz (16/27/fopen): adding to final database dump
+0066.951 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOterm_relationships.table.tmpr100001.gz (17/27/fopen): adding to final database dump
+0066.953 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOterm_relationships.table.gz (18/27/fopen): adding to final database dump
+0066.956 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOterm_taxonomy.table.tmpr18.gz (19/27/fopen): adding to final database dump
+0066.959 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOterm_taxonomy.table.gz (20/27/fopen): adding to final database dump
+0066.961 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOtermmeta.table.tmpr49.gz (21/27/fopen): adding to final database dump
+0066.964 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOtermmeta.table.gz (22/27/fopen): adding to final database dump
+0066.966 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOterms.table.tmpr18.gz (23/27/fopen): adding to final database dump
+0066.968 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOterms.table.gz (24/27/fopen): adding to final database dump
+0066.971 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_cookie_scan.table.tmpr2.gz (25/27/fopen): adding to final database dump
+0066.973 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_cookie_scan.table.gz (26/27/fopen): adding to final database dump
+0066.975 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_cookie_scan_categories.table.tmpr2.gz (27/27/fopen): adding to final database dump
+0066.977 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_cookie_scan_categories.table.gz (28/27/fopen): adding to final database dump
+0066.979 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_cookie_scan_cookies.table.tmpr8.gz (29/27/fopen): adding to final database dump
+0066.981 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_cookie_scan_cookies.table.gz (30/27/fopen): adding to final database dump
+0066.985 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_cookie_scan_url.table.tmpr8.gz (31/27/fopen): adding to final database dump
+0066.989 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_cookie_scan_url.table.gz (32/27/fopen): adding to final database dump
+0066.991 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_scripts.table.tmpr5.gz (33/27/fopen): adding to final database dump
+0066.994 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOcli_scripts.table.gz (34/27/fopen): adding to final database dump
+0066.995 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOe_events.table.tmpr14.gz (35/27/fopen): adding to final database dump
+0066.997 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOe_events.table.gz (36/27/fopen): adding to final database dump
+0066.999 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOfrm_fields.table.tmpr29.gz (37/27/fopen): adding to final database dump
+0067.000 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOfrm_fields.table.gz (38/27/fopen): adding to final database dump
+0067.002 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOfrm_forms.table.tmpr3.gz (39/27/fopen): adding to final database dump
+0067.005 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOfrm_forms.table.gz (40/27/fopen): adding to final database dump
+0067.007 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOfrm_item_metas.table.tmpr202.gz (41/27/fopen): adding to final database dump
+0067.010 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOfrm_item_metas.table.gz (42/27/fopen): adding to final database dump
+0067.014 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOfrm_items.table.tmpr27.gz (43/27/fopen): adding to final database dump
+0067.016 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOfrm_items.table.gz (44/27/fopen): adding to final database dump
+0067.018 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_indexable.table.tmpr181.gz (45/27/fopen): adding to final database dump
+0067.020 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_indexable.table.gz (46/27/fopen): adding to final database dump
+0067.023 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_indexable_hierarchy.table.tmpr1001.gz (47/27/fopen): adding to final database dump
+0067.025 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_indexable_hierarchy.table.gz (48/27/fopen): adding to final database dump
+0067.027 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_migrations.table.tmpr24.gz (49/27/fopen): adding to final database dump
+0067.029 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_migrations.table.gz (50/27/fopen): adding to final database dump
+0067.031 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_primary_term.table.tmpr7.gz (51/27/fopen): adding to final database dump
+0067.034 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_primary_term.table.gz (52/27/fopen): adding to final database dump
+0067.037 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_seo_links.table.tmpr109.gz (53/27/fopen): adding to final database dump
+0067.039 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db-table-ThSeEsAOyoast_seo_links.table.gz (54/27/fopen): adding to final database dump
+0067.043 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db.gz: finished writing out complete database file (441.5 KB)
+0067.081 (0) Total database tables backed up: 27 (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db.gz, size: 452211, sha1: d14ac926f5afd0d146ddcfb4c1755902e4c1ca1f, sha256: 60269a39c68f0b0d427b9626d6b58e7854f9346c76598ce0e42803a5ec16b911)
+0067.100 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0067.108 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0067.112 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0067.116 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip: others: This file has not yet been successfully uploaded: will queue
+0067.120 (0) backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db.gz: db: This file has not yet been successfully uploaded: will queue
+0067.122 (0) Saving backup history. Total backup size: 67.8 MB
+0067.130 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0067.138 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0067.140 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-143e6041b42fa0f11b347a2a1f3d9ac2)
+0070.704 (0) Google Drive: quota usage: used=448.9 MB, total=15360 MB, available=14911.1 MB
+0070.707 (0) Google Drive: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip: Attempting to upload to Google Drive (into folder id: 1-Sd2ioR3Ei35hu_OxfIV4kObZWUXo-af)
+0071.174 (0) Googledrive chunked upload: 3.1 % uploaded (1048576 - increasing chunk size to 2048 KB - memory usage: 73.9 / 94)
+0071.328 (0) Googledrive chunked upload: 9.4 % uploaded (3145728 - increasing chunk size to 4096 KB - memory usage: 74 / 94)
+0071.574 (0) Googledrive chunked upload: 22 % uploaded (7340032 - increasing chunk size to 8192 KB - memory usage: 74 / 94)
+0072.010 (0) Googledrive chunked upload: 47.2 % uploaded (15728640 - increasing chunk size to 16384 KB - memory usage: 74 / 94)
+0072.540 (0) Googledrive chunked upload: 97.5 % uploaded (32505856 - increasing chunk size to 32768 KB - memory usage: 74 / 94)
+0074.296 (0) Googledrive chunked upload: 100 % uploaded (32505856)
+0074.301 (0) Google Drive: OK: Archive backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip uploaded in 3.59 seconds
+0074.303 (0) Recording as successfully uploaded: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip
+0074.307 (0) Deleting local file: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip: OK
+0074.308 (0) Deleting zip manifest (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-plugins.zip.list.tmp)
+0074.612 (0) Google Drive: quota usage: used=480.7 MB, total=15360 MB, available=14879.3 MB
+0074.615 (0) Google Drive: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip: Attempting to upload to Google Drive (into folder id: 1-Sd2ioR3Ei35hu_OxfIV4kObZWUXo-af)
+0075.163 (0) Googledrive chunked upload: 14.9 % uploaded (1048576 - increasing chunk size to 2048 KB - memory usage: 73.9 / 94)
+0075.316 (0) Googledrive chunked upload: 44.7 % uploaded (3145728 - increasing chunk size to 4096 KB - memory usage: 74 / 94)
+0076.579 (0) Googledrive chunked upload: 100 % uploaded (3145728)
+0076.585 (0) Google Drive: OK: Archive backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip uploaded in 1.97 seconds
+0076.588 (0) Recording as successfully uploaded: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip
+0076.595 (0) Deleting local file: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip: OK
+0076.599 (0) Deleting zip manifest (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-themes.zip.list.tmp)
+0076.907 (0) Google Drive: quota usage: used=487.4 MB, total=15360 MB, available=14872.6 MB
+0076.909 (0) Google Drive: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip: Attempting to upload to Google Drive (into folder id: 1-Sd2ioR3Ei35hu_OxfIV4kObZWUXo-af)
+0077.443 (0) Googledrive chunked upload: 3.7 % uploaded (1048576 - increasing chunk size to 2048 KB - memory usage: 73.9 / 94)
+0077.614 (0) Googledrive chunked upload: 11 % uploaded (3145728 - increasing chunk size to 4096 KB - memory usage: 74 / 94)
+0077.784 (0) Googledrive chunked upload: 25.7 % uploaded (7340032 - increasing chunk size to 8192 KB - memory usage: 74 / 94)
+0078.046 (0) Googledrive chunked upload: 55 % uploaded (15728640 - increasing chunk size to 16384 KB - memory usage: 74 / 94)
+0079.778 (0) Googledrive chunked upload: 100 % uploaded (15728640)
+0079.790 (0) Google Drive: OK: Archive backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip uploaded in 2.88 seconds
+0079.793 (0) Recording as successfully uploaded: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip
+0079.799 (0) Deleting local file: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip: OK
+0079.802 (0) Deleting zip manifest (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-uploads.zip.list.tmp)
+0080.032 (0) Google Drive: quota usage: used=514.7 MB, total=15360 MB, available=14845.3 MB
+0080.036 (0) Google Drive: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip: Attempting to upload to Google Drive (into folder id: 1-Sd2ioR3Ei35hu_OxfIV4kObZWUXo-af)
+0080.548 (0) Googledrive chunked upload: 65.2 % uploaded (1048576 - increasing chunk size to 2048 KB - memory usage: 73.9 / 94)
+0081.738 (0) Googledrive chunked upload: 100 % uploaded (1048576)
+0081.746 (0) Google Drive: OK: Archive backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip uploaded in 1.71 seconds
+0081.748 (0) Recording as successfully uploaded: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip
+0081.753 (0) Deleting local file: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip: OK
+0081.755 (0) Deleting zip manifest (backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-others.zip.list.tmp)
+0082.146 (0) Google Drive: quota usage: used=514.7 MB, total=15360 MB, available=14845.3 MB
+0082.151 (0) Google Drive: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db.gz: Attempting to upload to Google Drive (into folder id: 1-Sd2ioR3Ei35hu_OxfIV4kObZWUXo-af)
+0083.800 (0) Googledrive chunked upload: 100 % uploaded
+0083.807 (0) Google Drive: OK: Archive backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db.gz uploaded in 1.65 seconds
+0083.809 (0) Recording as successfully uploaded: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db.gz
+0083.819 (0) Deleting local file: backup_2022-08-22-0807_Nazar_Concierge_9c8d51c41827-db.gz: OK
+0083.826 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=4, retain_db=4
+0083.828 (0) Number of backup sets in history: 5; groups (db): 1
+0083.830 (0) Examining (for databases) backup set with group_id=0, nonce=9c8d51c41827, datestamp=1661155664 (Aug 22 2022 08:07:44)
+0083.832 (0) This backup set is the backup set just made, so will not be deleted.
+0083.832 (0) Examining (for databases) backup set with group_id=0, nonce=1a7484820201, datestamp=1661072665 (Aug 21 2022 09:04:25)
+0083.832 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.833 (0) Examining (for databases) backup set with group_id=0, nonce=1f5c5aec22bf, datestamp=1660972147 (Aug 20 2022 05:09:07)
+0083.833 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.833 (0) Examining (for databases) backup set with group_id=0, nonce=221f3abe1b20, datestamp=1660859201 (Aug 18 2022 21:46:41)
+0083.833 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0083.833 (0) Examining (for databases) backup set with group_id=0, nonce=d9365bb2816d, datestamp=1660774839 (Aug 17 2022 22:20:39)
+0083.833 (0) 1660774839: db: this set includes a database (backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-db.gz); db count is now 4
+0083.833 (0) 1660774839: db: over retain limit (4); will delete this database
+0083.833 (0) Delete file: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-db.gz, service=googledrive
+0085.217 (0) Google Drive: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-db.gz: Deletion successful
+0085.224 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0085.226 (0) Number of backup sets in history: 5; groups (files): 1
+0085.228 (0) Examining (for files) backup set with nonce=9c8d51c41827, datestamp=1661155664 (Aug 22 2022 08:07:44)
+0085.228 (0) This backup set is the backup set just made, so will not be deleted.
+0085.230 (0) This backup set is the backup set just made, so will not be deleted.
+0085.230 (0) This backup set is the backup set just made, so will not be deleted.
+0085.230 (0) This backup set is the backup set just made, so will not be deleted.
+0085.230 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0085.232 (0) Examining (for files) backup set with nonce=1a7484820201, datestamp=1661072665 (Aug 21 2022 09:04:25)
+0085.232 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0085.232 (0) Examining (for files) backup set with nonce=1f5c5aec22bf, datestamp=1660972147 (Aug 20 2022 05:09:07)
+0085.232 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0085.232 (0) Examining (for files) backup set with nonce=221f3abe1b20, datestamp=1660859201 (Aug 18 2022 21:46:41)
+0085.232 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0085.232 (0) Examining (for files) backup set with nonce=d9365bb2816d, datestamp=1660774839 (Aug 17 2022 22:20:39)
+0085.232 (0) plugins: over retain limit (4); will delete this file entity
+0085.232 (0) themes: over retain limit (4); will delete this file entity
+0085.232 (0) uploads: over retain limit (4); will delete this file entity
+0085.232 (0) others: over retain limit (4); will delete this file entity
+0085.232 (0) Delete file: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-plugins.zip, service=googledrive
+0085.234 (0) Delete file: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-themes.zip, service=googledrive
+0085.236 (0) Delete file: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-uploads.zip, service=googledrive
+0085.241 (0) Delete file: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-others.zip, service=googledrive
+0086.250 (0) Google Drive: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-others.zip: Deletion successful
+0086.825 (0) Google Drive: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-uploads.zip: Deletion successful
+0087.506 (0) Google Drive: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-themes.zip: Deletion successful
+0088.189 (0) Google Drive: backup_2022-08-17-2220_Nazar_Concierge_d9365bb2816d-plugins.zip: Deletion successful
+0088.197 (0) This backup set is now empty; will remove from history
+0088.199 (0) Deleting log file (log.d9365bb2816d.txt)
+0088.201 (0) Retain: saving new backup history (sets now: 4) and finishing retain operation
+0088.209 (0) Resume backup (9c8d51c41827, 0): finish run
+0088.215 (0) Decremented the semaphore (fd) by 1
+0088.219 (0) Semaphore (fd) unlocked
+0088.221 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0088.230 (0) The backup apparently succeeded and is now complete
+0088.232 (0) No email will/can be sent - the user has not configured an email address.
+0088.234 (0) La sauvegarde a apparemment réussi et est maintenant terminée

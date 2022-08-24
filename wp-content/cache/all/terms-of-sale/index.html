@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html class="html" lang="fr-FR">
+<head>
+<meta charset="UTF-8">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<meta name="viewport" content="width=device-width, initial-scale=1">			<style>
+#searchBar-1
+{
+display: flex;
+flex-direction: row;
+max-width: 350px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+border-radius: 30px;
+margin-left: auto;
+margin-right: auto;
+}
+#searchBar-1 button
+{
+color: white;
+width: 100%;
+height: 50px !important;
+border-radius: 0px 30px 30px 0px;
+font-weight: bold;
+background-color:  #25282a; /*#2c3033;*/
+text-transform: unset !important;
+letter-spacing: 0.7px;
+}
+#searchBar-1 button:hover
+{
+color: #d8dadc !important;
+}
+#bloc-searchBar-1
+{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+#bloc-searchBar-1:hover
+{
+color: grey;
+}
+#bloc-searchBar-1 img
+{
+display: inline-block;
+width: 20px !important;
+margin-left: 13px;
+margin-right: 10px
+}
+#searchBarinput-1
+{
+height: 50px !important;
+width: 218px !important;
+border: 0px !important;
+padding: 14px 1px 12px 5px;
+color: rgba(0,0,0,0.5);
+}
+@media (max-width:402px) 
+{
+#searchBarinput-1
+{
+width: 200px !important;
+}
+}
+@media (max-width:382px) 
+{
+#searchBarinput-1
+{
+width: 185px !important;
+}
+}
+#suggestion-close-btn
+{
+font-size: 1.5em;
+color: grey;
+text-align: center;
+width: 30px;
+}
+#bloc-searchBar-1:hover
+{
+}
+#suggestion-close-btn:hover
+{
+cursor: pointer;
+}
+#suggestion-box
+{
+display:none;
+position: fixed;
+top: 20%;
+z-index:1000;
+padding:20px;
+border-radius: 10px;
+box-shadow: 0 3px 9px rgba(0,0,0,0.4);
+width: 100%;
+max-width: 450px;
+background-color:white;
+left: 50%;
+transform: translateX(-50%);
+}
+#suggestion-box-title
+{
+font-weight: bold;
+font-size: 1.5em;
+}
+#searchBar-suggestion-list
+{
+overflow:scroll;
+max-height: 300px;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+.searchBox-items{
+margin-bottom: 9px;
+}
+.searchBox-items hr{
+margin-top: 9px !important;
+}
+#searchBox-category-name
+{
+font-size: 1.2em;
+margin-left: 10px;
+}
+.searchBox-items img
+{
+width: 35px !important;
+}
+</style>
+<style>
+#cards-and-filter-1
+{
+margin-top: -10px;
+max-width: 1140px;
+margin-left: auto;
+margin-right: auto;
+}
+#container-nouveautes1-infinite
+{
+margin-top: 10px;
+}
+.container-denis-1 .row {
+display: flex;
+align-items: center;
+justify-content: flex-start; /* sinon space-around */
+flex-wrap: wrap;
+align-items: center;
+}
+.container-denis-1 .card
+{
+display: flex;
+box-shadow: 0 0 5px grey;
+flex-direction: column;
+align-items: left;
+margin: 10px 0px 25px;
+padding: 0px 0px 10 0px;
+align-self: normal;
+border-radius: 9px;
+max-width: calc(50% - 30px);
+margin-left: 15px;
+margin-right: 15px;
+animation: 2s fadeIn;
+animation-fill-mode: forwards;
+}
+#card-title-1
+{
+margin-top: 0px;
+}
+.standard-card-bloc
+{
+padding: 5px 12px 5px 12px;
+margin-bottom: 0px;
+}
+.image-card-1 img
+{
+border-radius: 9px 9px 0px 0px !important;
+margin-top: -1px !important;
+}
+#price-person-bloc-card-1 img
+{
+max-width: 20px;
+margin-right: 4px;
+}
+.container-denis-1 img:hover
+{
+/*opacity: 0.8;*/
+}
+#city-departement-bloc-card-1
+{
+margin-top: -12px
+}
+.see-details-card-link:active, .see-details-card-link:focus,  .see-details-card-link:hover, .see-details-card-link:visited, .see-details-card:active, .see-details-card:focus
+{
+border: 0px black solid !important;
+}
+.see-details-card-link
+{
+margin-top: auto;
+}
+.see-details-card:hover
+{
+background-color: #ae9828;
+color: white !important;
+cursor: pointer;
+}
+.container-denis-1 a
+{
+display: inline-block;
+margin-bottom: 10px;
+}
+.afficher-plus
+{
+text-align: center;
+margin-top: 25px;
+}
+.afficher-plus span
+{
+border: 2px solid;
+padding: 8px 30px 8px 30px;
+border-radius: 15px;
+font-weight: bold;
+animation: 2s fadeIn;
+animation-fill-mode: forwards;
+}
+.afficher-plus span:hover
+{
+cursor: pointer;
+background-color: rgba(200,200,100,0.3);
+}
+@media (max-width:900px) 
+{ 
+.container-denis-1 .card
+{
+max-width: calc(100% - 10px);
+margin-top: 10px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 15px;
+}
+}
+@media (min-width:850px)   /* Attention ici min !!!!!!!!!!!!!!!!!!!! */
+{
+.container-denis-1 .card
+{
+transition: transform 0.5s;
+}
+.container-denis-1 .card:hover
+{
+-ms-transform: scale(1.02);
+-webkit-transform: scale(1.02);
+transform: scale(1.02);
+}
+}
+/*---- Filter------------------------------------------------------*/
+#dropdown-filter-1
+{
+text-align: right;
+}
+#dropdown-filter-1 .select
+{
+padding: 8px 5px 8px 10px !important;
+color: black;
+border: 2px solid #dddddd;
+cursor: pointer;
+border-radius: 8px;
+height: 42px;
+width: auto !important;
+margin-right: 90px;	
+font-weight: bold;
+/*Replace default style (arrow)*/
+}
+#dropdown-filter-1 .select:hover 
+{
+outline: none;
+color: rgba(0,0,0,0.7);
+}
+@media (max-width:900px) { 
+#dropdown-filter-1 .select
+{	
+margin-right: 9px;	
+}
+}
+#filter-plugin-datas
+{
+font-size: 0.1em;
+opacity: 0;
+}
+</style>
+<!-- This site is optimized with the Yoast SEO plugin v19.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Terms of Sale - Nazar Concierge</title>
+<link rel="canonical" href="https://nazarconcierge.fr/terms-of-sale" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Terms of Sale - Nazar Concierge" />
+<meta property="og:description" content="I. SCOPE OF TERMS OF SALE A. The Company NAZAR CONCIERGE (thereafter mentioned as ‘’NC’’), whose head office is situated at 60 Rue François 1er 75008 Paris, offers its Client (thereafter mentioned as ‘’Client’’, or ‘’Member’’) personal services. NC acts as a direct service provider or as an intermediary for connecting the Client with Partner [&hellip;]" />
+<meta property="og:url" content="https://nazarconcierge.fr/terms-of-sale" />
+<meta property="og:site_name" content="Nazar Concierge" />
+<meta property="article:modified_time" content="2022-07-05T08:23:27+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:label1" content="Durée de lecture estimée" />
+<meta name="twitter:data1" content="7 minutes" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://nazarconcierge.fr/#website","url":"https://nazarconcierge.fr/","name":"Nazar Concierge","description":"Luxury Services in Paris","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://nazarconcierge.fr/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"fr-FR"},{"@type":"WebPage","@id":"https://nazarconcierge.fr/terms-of-sale#webpage","url":"https://nazarconcierge.fr/terms-of-sale","name":"Terms of Sale - Nazar Concierge","isPartOf":{"@id":"https://nazarconcierge.fr/#website"},"datePublished":"2022-06-27T10:48:11+00:00","dateModified":"2022-07-05T08:23:27+00:00","breadcrumb":{"@id":"https://nazarconcierge.fr/terms-of-sale#breadcrumb"},"inLanguage":"fr-FR","potentialAction":[{"@type":"ReadAction","target":["https://nazarconcierge.fr/terms-of-sale"]}]},{"@type":"BreadcrumbList","@id":"https://nazarconcierge.fr/terms-of-sale#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://nazarconcierge.fr/"},{"@type":"ListItem","position":2,"name":"Terms of Sale"}]}]}</script>
+<!-- / Yoast SEO plugin. -->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Nazar Concierge &raquo; Flux" href="https://nazarconcierge.fr/feed" />
+<link rel="alternate" type="application/rss+xml" title="Nazar Concierge &raquo; Flux des commentaires" href="https://nazarconcierge.fr/comments/feed" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/nazarconcierge.fr\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 0.07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<!-- <link rel='stylesheet' id='formidable-css'  href='https://nazarconcierge.fr/wp-content/plugins/formidable/css/formidableforms.css?ver=6231129' media='all' /> -->
+<!-- <link rel='stylesheet' id='wp-block-library-css'  href='https://nazarconcierge.fr/wp-includes/css/dist/block-library/style.min.css?ver=6.0.1' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//nazarconcierge.fr/wp-content/cache/wpfc-minified/979r6j72/fh3xw.css" media="all"/>
+<style id='wp-block-library-theme-inline-css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<!-- <link rel='stylesheet' id='cookie-law-info-css'  href='https://nazarconcierge.fr/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-public.css?ver=2.1.2' media='all' /> -->
+<!-- <link rel='stylesheet' id='cookie-law-info-gdpr-css'  href='https://nazarconcierge.fr/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-gdpr.css?ver=2.1.2' media='all' /> -->
+<!-- <link rel='stylesheet' id='hfe-style-css'  href='https://nazarconcierge.fr/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.6.11' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-icons-css'  href='https://nazarconcierge.fr/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.15.0' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-frontend-css'  href='https://nazarconcierge.fr/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.6.6' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//nazarconcierge.fr/wp-content/cache/wpfc-minified/fr28y417/fh3xw.css" media="all"/>
+<link rel='stylesheet' id='elementor-post-15-css'  href='https://nazarconcierge.fr/wp-content/uploads/elementor/css/post-15.css?ver=1655884362' media='all' />
+<!-- <link rel='stylesheet' id='elementor-global-css'  href='https://nazarconcierge.fr/wp-content/uploads/elementor/css/global.css?ver=1655884788' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//nazarconcierge.fr/wp-content/cache/wpfc-minified/7jbp97yx/fh3xw.css" media="all"/>
+<link rel='stylesheet' id='elementor-post-26-css'  href='https://nazarconcierge.fr/wp-content/uploads/elementor/css/post-26.css?ver=1658827164' media='all' />
+<!-- <link rel='stylesheet' id='hfe-widgets-style-css'  href='https://nazarconcierge.fr/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.6.11' media='all' /> -->
+<!-- <link rel='stylesheet' id='font-awesome-css'  href='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=5.15.1' media='all' /> -->
+<!-- <link rel='stylesheet' id='simple-line-icons-css'  href='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' media='all' /> -->
+<!-- <link rel='stylesheet' id='oceanwp-style-css'  href='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/css/style.min.css?ver=3.3.3' media='all' /> -->
+<!-- <link rel='stylesheet' id='oceanwp-hamburgers-css'  href='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/css/third/hamburgers/hamburgers.min.css?ver=3.3.3' media='all' /> -->
+<!-- <link rel='stylesheet' id='oceanwp-spring-css'  href='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/css/third/hamburgers/types/spring.css?ver=3.3.3' media='all' /> -->
+<!-- <link rel='stylesheet' id='oe-widgets-style-css'  href='https://nazarconcierge.fr/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=6.0.1' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//nazarconcierge.fr/wp-content/cache/wpfc-minified/8uxf2x9m/fh3xw.css" media="all"/>
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CNeuton%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.0.1' media='all' />
+<!-- <link rel='stylesheet' id='elementor-icons-shared-0-css'  href='https://nazarconcierge.fr/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-icons-fa-brands-css'  href='https://nazarconcierge.fr/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//nazarconcierge.fr/wp-content/cache/wpfc-minified/1cc3e3t4/fh3xw.css" media="all"/>
+<script src='//nazarconcierge.fr/wp-content/cache/wpfc-minified/etkw2gyh/fh3xw.js' type="text/javascript"></script>
+<!-- <script src='https://nazarconcierge.fr/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script> -->
+<!-- <script src='https://nazarconcierge.fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script> -->
+<script id='cookie-law-info-js-extra'>
+var Cli_Data = {"nn_cookie_ids":["cookielawinfo-checkbox-advertisement"],"cookielist":[],"non_necessary_cookies":{"functional":["SEARCH_SAMESITE"],"analytics":["NID","OTZ","HSID","SSID","SID","DV","AEC"],"advertisement":["__Secure-1PSID","__Secure-1PAPISID","__Secure-3PSID","__Secure-3PAPISID","SIDCC","__Secure-1PSIDCC","__Secure-3PSIDCC","APISID","SAPISID","SOCS","CONSENT","__Secure-ENID"]},"ccpaEnabled":"","ccpaRegionBased":"","ccpaBarEnabled":"","strictlyEnabled":["necessary","obligatoire"],"ccpaType":"gdpr","js_blocking":"1","custom_integration":"","triggerDomRefresh":"","secure_cookies":""};
+var cli_cookiebar_settings = {"animate_speed_hide":"500","animate_speed_show":"500","background":"#000000","border":"#b1a6a6c2","border_on":"","button_1_button_colour":"#61a229","button_1_button_hover":"#4e8221","button_1_link_colour":"#00c6d8","button_1_as_button":"","button_1_new_win":"","button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":"","button_2_hidebar":"","button_3_button_colour":"#d83131","button_3_button_hover":"#ad2727","button_3_link_colour":"#00c6d8","button_3_as_button":"","button_3_new_win":"","button_4_button_colour":"#dedfe0","button_4_button_hover":"#b2b2b3","button_4_link_colour":"#00c6d8","button_4_as_button":"","button_7_button_colour":"#61a229","button_7_button_hover":"#4e8221","button_7_link_colour":"#00c6d8","button_7_as_button":"","button_7_new_win":"","font_family":"inherit","header_fix":"","notify_animate_hide":"1","notify_animate_show":"","notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":"","scroll_close_reload":"","accept_close_reload":"","reject_close_reload":"","showagain_tab":"","showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#ffffff","show_once_yn":"","show_once":"10000","logging_on":"","as_popup":"","popup_overlay":"1","bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"};
+var log_object = {"ajax_url":"https:\/\/nazarconcierge.fr\/wp-admin\/admin-ajax.php"};
+</script>
+<script src='//nazarconcierge.fr/wp-content/cache/wpfc-minified/e5m0osf/fh3xw.js' type="text/javascript"></script>
+<!-- <script src='https://nazarconcierge.fr/wp-content/plugins/cookie-law-info/public/js/cookie-law-info-public.js?ver=2.1.2' id='cookie-law-info-js'></script> -->
+<link rel="https://api.w.org/" href="https://nazarconcierge.fr/wp-json/" /><link rel="alternate" type="application/json" href="https://nazarconcierge.fr/wp-json/wp/v2/pages/496" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nazarconcierge.fr/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://nazarconcierge.fr/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 6.0.1" />
+<link rel='shortlink' href='https://nazarconcierge.fr/?p=496' />
+<link rel="alternate" type="application/json+oembed" href="https://nazarconcierge.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnazarconcierge.fr%2Fterms-of-sale" />
+<link rel="alternate" type="text/xml+oembed" href="https://nazarconcierge.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnazarconcierge.fr%2Fterms-of-sale&#038;format=xml" />
+<script type="text/javascript">document.documentElement.className += " js";</script>
+<link rel="icon" href="https://nazarconcierge.fr/wp-content/uploads/2022/07/nazar-2-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://nazarconcierge.fr/wp-content/uploads/2022/07/nazar-2.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://nazarconcierge.fr/wp-content/uploads/2022/07/nazar-2.png" />
+<meta name="msapplication-TileImage" content="https://nazarconcierge.fr/wp-content/uploads/2022/07/nazar-2.png" />
+<style id="wp-custom-css">
+/*--- General ------------*//*------------------------*/body{animation:2s fadeIn;animation-fill-mode:forwards}/*--Augmente largeur----*/@media (max-width:500px){.mysection-elementor{color:black !important;margin-left:-15px;margin-right:-15px}}/*-- Menu--- -----------*//*----------------------*//*--Bouton Appel--*/#menu-item-93 a span{background-color:#CFB53B;padding:10px;border-radius:10px}/*--Bouton Appel--*/#menu-item-93 a{color:#fff !important}/*--Pointillés--*/.oceanwp-mobile-menu-icon a:focus{outline:0 dashed #e3e3e3 !important}/*--Pointillés--*/#mobile-dropdown ul li a:focus{outline:1px solid #e3e3e3}/*--Pointillés--*/#mobile-dropdown ul li a .dropdown-toggle:focus{outline:1px dashed #e3e3e3}.dropdown-menu .sub-menu{border-top:0}/*-- Banniere Principale --*//*------------------------*/#btn-call-denis-1{transition:transform 0.5s}#btn-call-denis-1:hover{-ms-transform:scale(1.1);-webkit-transform:scale(1.1);transform:scale(1.1)}/*-- Pied de page ----*//*--------------------*/#bloc-contact-2{font-family:"Neuton",Sans-serif;font-size:17px}#bloc-contact-2 .sous-bloc-contact{text-align:center;color:white !important;margin-bottom:5px}#bloc-contact-2 .sous-bloc-contact i{margin-right:9px}#bloc-contact-2 .sous-bloc-contact a{color:white}#bloc-contact-2 .sous-bloc-contact a:hover{color:orange !important}#footer-part-2{font-family:"Neuton",Sans-serif;font-size:17px}#gestion-cookies-1:hover{cursor:pointer}		</style>
+<!-- OceanWP CSS -->
+<style type="text/css">
+/* General CSS */input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,button[type="submit"]:hover,input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,button[type="submit"]:focus,.button:hover,.button:focus,#site-navigation-wrap .dropdown-menu >li.btn >a:hover >span,.post-quote-author,.omw-modal .omw-close-modal:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:hover,body div.wpforms-container-full .wpforms-form button[type=submit]:hover,body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover{background-color:#c4ab2d}a:hover{color:#c4ab2d}a:hover .owp-icon use{stroke:#c4ab2d}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:65px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,.mobile-menu-close,.after-header-content-inner >a{line-height:65px}#site-header{border-color:#c4ab2d}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:187px}@media (max-width:768px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:161px}}@media (max-width:480px){#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:137px}}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:98px}.effect-one #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-three #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{background-color:#c4ab2d}.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{color:#c4ab2d}.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{text-shadow:10px 0 #c4ab2d,-10px 0 #c4ab2d}#site-navigation-wrap .dropdown-menu >li >a{padding:0 19px}.mobile-menu .hamburger-inner,.mobile-menu .hamburger-inner::before,.mobile-menu .hamburger-inner::after{background-color:#000000}
+</style></head>
+<body class="page-template-default page page-id-496 wp-custom-logo wp-embed-responsive ehf-footer ehf-template-oceanwp ehf-stylesheet-oceanwp oceanwp-theme dropdown-mobile default-breakpoint content-full-width content-max-width elementor-default elementor-kit-15" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+<div id="outer-wrap" class="site clr">
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+<div id="wrap" class="clr">
+<header id="site-header" class="minimal-header center-logo effect-one clr" data-height="65" itemscope="itemscope" itemtype="https://schema.org/WPHeader" role="banner">
+<div id="site-header-inner" class="clr container">
+<div class="oceanwp-mobile-menu-icon clr mobile-left">
+<a href="#" class="mobile-menu"  aria-label="Menu mobile">
+<div class="hamburger hamburger--spring" aria-expanded="false" role="navigation">
+<div class="hamburger-box">
+<div class="hamburger-inner"></div>
+</div>
+</div>
+</a>
+</div><!-- #oceanwp-mobile-menu-navbar -->
+<div id="site-logo" class="clr" itemscope itemtype="https://schema.org/Brand" >
+<div id="site-logo-inner" class="clr">
+<a href="https://nazarconcierge.fr/" class="custom-logo-link" rel="home"><img width="1268" height="347" src="https://nazarconcierge.fr/wp-content/uploads/2022/06/cropped-Logo-2.png" class="custom-logo" alt="Nazar Concierge" srcset="https://nazarconcierge.fr/wp-content/uploads/2022/06/cropped-Logo-2.png 1268w, https://nazarconcierge.fr/wp-content/uploads/2022/06/cropped-Logo-2-300x82.png 300w, https://nazarconcierge.fr/wp-content/uploads/2022/06/cropped-Logo-2-1024x280.png 1024w, https://nazarconcierge.fr/wp-content/uploads/2022/06/cropped-Logo-2-768x210.png 768w" sizes="(max-width: 1268px) 100vw, 1268px" /></a>
+</div><!-- #site-logo-inner -->
+</div><!-- #site-logo -->
+<div id="site-navigation-wrap" class="clr">
+<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation" >
+<ul id="menu-menu-1" class="main-menu dropdown-menu sf-menu"><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-91"><a href="https://nazarconcierge.fr#separation-section-1" class="menu-link"><span class="text-wrap">Services</span></a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="#" class="menu-link"><span class="text-wrap">About Us</span></a></li><li id="menu-item-93" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a href="https://wa.me/+33761830251" class="menu-link"><span class="text-wrap"><i class="icon before line-icon icon-phone" aria-hidden="true" style="font-size:1em;"></i><span class="menu-text">0761830251</span></span></a></li></ul>
+</nav><!-- #site-navigation -->
+</div><!-- #site-navigation-wrap -->
+</div><!-- #site-header-inner -->
+<div id="mobile-dropdown" class="clr" >
+<nav class="clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+<ul id="menu-menu-2" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-91"><a href="https://nazarconcierge.fr#separation-section-1">Services</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="#">About Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a href="https://wa.me/+33761830251"><i class="icon before line-icon icon-phone" aria-hidden="true" style="font-size:1em;"></i><span class="menu-text">0761830251</span></a></li>
+</ul>
+</nav>
+</div>
+</header><!-- #site-header -->
+<main id="main" class="site-main clr"  role="main">
+<header class="page-header centered-page-header">
+<div class="container clr page-header-inner">
+<h1 class="page-header-title clr" itemprop="headline">Terms of Sale</h1>
+</div><!-- .page-header-inner -->
+</header><!-- .page-header -->
+<div id="content-wrap" class="container clr">
+<div id="primary" class="content-area clr">
+<div id="content" class="site-content clr">
+<article class="single-page-article clr">
+<div class="entry clr" itemprop="text">
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>I. SCOPE OF TERMS OF SALE</strong></h2>
+<p><strong>A.  </strong>The Company NAZAR CONCIERGE (thereafter mentioned as ‘’NC’’), whose head office is situated at 60 Rue François 1er 75008 Paris, offers its Client (thereafter mentioned as ‘’Client’’, or ‘’Member’’) personal services. NC acts as a direct service provider or as an intermediary for connecting the Client with Partner Service Providers or Partner Suppliers (hereinafter mentioned as the “Partners”). When NC acts as an intermediary between the Client and Partners, the Client must refer to the Terms of Sales of the Partners.</p>
+<p><strong>B.  </strong>This Terms Of Sales are available at any time by the Client, and are sent to him when modifications occure.</p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>II. ACCESS CONDITIONS</strong></h2>
+<p><strong>A.  </strong>The Member (or the Client) must be 18 years old or older.</p>
+<p><strong>B.  </strong>Every subscription or requests directly done by NC involves the acceptance of this Terms of Sales. If the service is done by a Partner, it involves the acceptance of the Terms of Sales of the Partner Company.</p>
+<p><strong>C.  </strong>In the case of a subscription, the Member and his/her spouse can both benefit from the service.</p>
+<p><strong>D.  </strong>The phone number given by the Client (or the Member) will authenticate him for the next orders. In the case of a subscription, the Member can give NC a second phone number for the authentication of her/his spouse. The first email address given by the Client (or the Member) can also authenticate him.</p>
+<p><strong>E.  </strong>In the case of a subscription, the Member must use telephone call, SMS or Whatsapp to order a service. If the service costs more than 1000€, a two-factor authentication will be asked. If NC has any doubt concerning the authenticity of the Member, he will be asked a two-factor authentication. If the Client or Member uses another phone number than given previously, he will be asked a two-factor authentication.</p>
+<p><strong>F.  </strong>Every requests coming from the media listed above (Phone, Whatsapp, Email) are considered valid to authenticate the Member. No objection is possible, except in case of loss or theft. If it’s the case, a statement of theft or loss must be given to NC.</p>
+<p><strong>G.  </strong>The member must take the essential measures to prevent another person to use the service in his/her name.</p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>III. ORDER TERMS</strong></h2>
+<p><strong>A. </strong>An order is considered effective after an electronic confirmation by NC, which must have received previously the order form dated and signed by the Client.</p>
+<p><strong>B.  </strong>NC undertakes to notify the Member within 48 hours of his request. NC has the right to refuse a request under the terms of Article L122-1 of the Consumer Code</p>
+<p><strong>C.  </strong>If NC is not able to execute the service under the conditions agreed during the order acceptance, NC will propose an alternative solution to the Client. If this alternative solution is not accepted by the client or no other solution is found, the order will be considered not accepted whithout any compensation.</p>
+<p><strong>D.  </strong>Any change or cancel request must be done at least 3 days before the effective date of the service. These requests stay subject to the acceptance of NC. If this period of time is not respected, the request may be rejected and the already paid sum of money may not be refunded.</p>
+<p><strong>E.  </strong>If the order concerns a service done by a Partner, NC acts as an intermediary and has no responsibility in the execution of the Service.</p>
+<p><strong>F.  </strong>NC cannot be considered responsible for damages or harm of any kind caused by a Partner. Delays or non-compliance of a service done by a Partner is not considered as a modification or a cancellation of the service. </p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>IV. PAYMENT</strong></h2>
+<p><strong>A.  </strong>The client engages to pay either NC before the order to be done by the Partner, or to pay directly the Partner according to its Terms of Service. </p>
+<p><strong>B.  </strong>The prices will be valid for 3 months since the date of the price proposal made to the Customer. NC may modify the prices in case that VAT becomes applicable. If the Member disagrees with the changes, the Member can terminate the Subscription without penalty. </p>
+<p><strong>C.  </strong>Upon receipt of the invoice, the Member agrees to pay for the service. In the case of late payment, NC cannot be responsible of availability changes.</p>
+<p><strong>D.  </strong>For any delay, late delivery penalties will be applied at the legal interest rate in effect.</p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>V. RETRACTION</strong></h2>
+<p><strong>A.  </strong>From the date of the validation of a price proposal, the law carries the right of withdrawal to 14 days. During this period of time, the customer can cancel his order.<br> He can do this by sending an email to <strong>contact@nazarconcierge.fr</strong>.<br> 
+This retractation will lead to the reimbursement of the Subscription which would have already been paid by the Member.<br> 
+<strong>In the case that the service has already been engaged, no reimbursement is possible.</strong>
+</p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>VI. CANCELLATION</strong></h2>
+<p><strong>A.  </strong>The Terms of Sales provides the possibility for the Member to terminate the subscription before its stipulated end date. This termination is effective only after receiving a written request of the Member by post. The subscription will stop at the end of the month when the written request has been received. </p>
+<p><strong>B.  </strong>NC has the right to stop a subscription at any time and without having to justify it. It is the case for non-payment by the customer. If sum of money have been committed for services not yet executed, a refund will then be made.</p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>VII. LIABILITY</strong></h2>
+<p><strong>A.  </strong>For services for which NC acts as an intermediary, it has no liability in the execution of the service by the Partner. Any request for compensation must be sent to the Partner. </p>
+<p><strong>B.  </strong>NC acts upon the details given by the Client and Members. Any mistakes taking its origins from the details given by the Client or Member cannot be assigned to NC.</p>
+<p><strong>C.  </strong>For services for which NC acts as an intermediary, NC cannot guarantee the Client and Member against lack of conformity of the services and hidden defect of a good, resulting from the design defect of a good given by the Partner</p>
+<p><strong>D.  </strong>According the Civil Code, NC cannot be responsible of bad executions of a service when a case of force majeur occurs (transportation strike, public unrest, IT issues, fire, flood)</p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>VIII. CUSTOMER&rsquo;S COMMITMENT</strong></h2>
+<p><strong>A.  </strong>The customer agrees to comply with the laws and regulations applicable to him, especially for the rental of a car or a furnished tourist accommodation. Under no circumstances can NC be held responsible for the client&rsquo;s non-compliance with its legal or tax obligations.</p>
+<p><strong>B.  </strong>The customer agrees to take out insurance against all risks and direct or indirect damage that may affect its leased cars and all of its equipment and declares that it is and will be, for the duration of these service, covered by all policies insurance in accordance with the practices in the matter, in particular with regard to its liability insurance with towards third parties.</p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>IX. PERSONAL DATA PROTECTION (CNIL)</strong></h2>
+<p><strong>A.  </strong>In accordance with the Data Protection Act of January 6, 1978, the customer has a right of access, rectification and opposition to personal data concerning him.<br>
+He can do this by sending an email to <strong>contact@nazarconcierge.fr.</strong>
+</p>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>X. CONFIDENTIALITY</strong></h2>
+<p><strong>A.  </strong>NC, the client and Members agree to respect the confidentiality of the information communicated by the other party before, during or after the performance of the Services.<br> 
+Each of the parties agrees :
+</p>
+<ul><li>not to make any use of it other than for the proper performance of the Services.</li><li>not to communicate this confidential information to anyone other than those who need it for the running of the Services</li></ul>
+<hr class="wp-block-separator has-css-opacity"/>
+<h2 class="has-vivid-cyan-blue-color has-text-color"><strong>XI. DISPUTES AND APPLICABLE LAW</strong></h2>
+<p><strong>A.  </strong>These General Terms of sale are governed by French law.<br>
+The parties will have to resolve amicably any litigation relating to the execution of the service. If no amicable settlement is found at the end of a period of 3 months from the date of the litigation by the complaining party to the other party, exclusive jurisdiction is given to the competent Court of Paris to resolve this dispute.
+</p>
+</div>
+</article>
+</div><!-- #content -->
+</div><!-- #primary -->
+</div><!-- #content-wrap -->
+
+</main><!-- #main -->
+<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
+<div class='footer-width-fixer'>		<div data-elementor-type="wp-post" data-elementor-id="26" class="elementor elementor-26">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-31ec640 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="31ec640" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8cf063b" data-id="8cf063b" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-d1ff822 elementor-widget elementor-widget-heading" data-id="d1ff822" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.6.6 - 08-06-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">Contact</h2>		</div>
+</div>
+<div class="elementor-element elementor-element-d26cb6a elementor-widget elementor-widget-html" data-id="d26cb6a" data-element_type="widget" data-widget_type="html.default">
+<div class="elementor-widget-container">
+<div id="bloc-contact-2">
+<div class="sous-bloc-contact">
+<i aria-hidden="true" class="fas fa-phone fa-1x"></i>
+<a  href="https://wa.me/+33761830251">07 61 83 02 51</a>
+</div>
+<div class="sous-bloc-contact">
+<i aria-hidden="true" class="fas fa-envelope fa-1x"></i>
+<a href="mailto:contact@nazarconcierge.fr?subject=Ask for a service">contact@nazarconcierge.fr</a>
+</div>
+<div class="sous-bloc-contact">
+<i aria-hidden="true" class="fas fa-clock fa-1x"></i>
+<span>Available 24/7</span>
+</div>
+</div>		</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-383e4f0" data-id="383e4f0" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-975c28c elementor-widget elementor-widget-heading" data-id="975c28c" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Follow</h2>		</div>
+</div>
+<div class="elementor-element elementor-element-a77455b elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="a77455b" data-element_type="widget" data-widget_type="social-icons.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.6.6 - 08-06-2022 */
+.elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container{line-height:1;font-size:0}.elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid{display:inline-grid}.elementor-widget-social-icons .elementor-grid{grid-column-gap:var(--grid-column-gap,5px);grid-row-gap:var(--grid-row-gap,5px);grid-template-columns:var(--grid-template-columns);-webkit-box-pack:var(--justify-content,center);-ms-flex-pack:var(--justify-content,center);justify-content:var(--justify-content,center);justify-items:var(--justify-content,center)}.elementor-icon.elementor-social-icon{font-size:var(--icon-size,25px);line-height:var(--icon-size,25px);width:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));height:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)))}.elementor-social-icon{--e-social-icon-icon-color:#fff;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;background-color:#818a91;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;cursor:pointer}.elementor-social-icon i{color:var(--e-social-icon-icon-color)}.elementor-social-icon svg{fill:var(--e-social-icon-icon-color)}.elementor-social-icon:last-child{margin:0}.elementor-social-icon:hover{opacity:.9;color:#fff}.elementor-social-icon-android{background-color:#a4c639}.elementor-social-icon-apple{background-color:#999}.elementor-social-icon-behance{background-color:#1769ff}.elementor-social-icon-bitbucket{background-color:#205081}.elementor-social-icon-codepen{background-color:#000}.elementor-social-icon-delicious{background-color:#39f}.elementor-social-icon-deviantart{background-color:#05cc47}.elementor-social-icon-digg{background-color:#005be2}.elementor-social-icon-dribbble{background-color:#ea4c89}.elementor-social-icon-elementor{background-color:#d30c5c}.elementor-social-icon-envelope{background-color:#ea4335}.elementor-social-icon-facebook,.elementor-social-icon-facebook-f{background-color:#3b5998}.elementor-social-icon-flickr{background-color:#0063dc}.elementor-social-icon-foursquare{background-color:#2d5be3}.elementor-social-icon-free-code-camp,.elementor-social-icon-freecodecamp{background-color:#006400}.elementor-social-icon-github{background-color:#333}.elementor-social-icon-gitlab{background-color:#e24329}.elementor-social-icon-globe{background-color:#818a91}.elementor-social-icon-google-plus,.elementor-social-icon-google-plus-g{background-color:#dd4b39}.elementor-social-icon-houzz{background-color:#7ac142}.elementor-social-icon-instagram{background-color:#262626}.elementor-social-icon-jsfiddle{background-color:#487aa2}.elementor-social-icon-link{background-color:#818a91}.elementor-social-icon-linkedin,.elementor-social-icon-linkedin-in{background-color:#0077b5}.elementor-social-icon-medium{background-color:#00ab6b}.elementor-social-icon-meetup{background-color:#ec1c40}.elementor-social-icon-mixcloud{background-color:#273a4b}.elementor-social-icon-odnoklassniki{background-color:#f4731c}.elementor-social-icon-pinterest{background-color:#bd081c}.elementor-social-icon-product-hunt{background-color:#da552f}.elementor-social-icon-reddit{background-color:#ff4500}.elementor-social-icon-rss{background-color:#f26522}.elementor-social-icon-shopping-cart{background-color:#4caf50}.elementor-social-icon-skype{background-color:#00aff0}.elementor-social-icon-slideshare{background-color:#0077b5}.elementor-social-icon-snapchat{background-color:#fffc00}.elementor-social-icon-soundcloud{background-color:#f80}.elementor-social-icon-spotify{background-color:#2ebd59}.elementor-social-icon-stack-overflow{background-color:#fe7a15}.elementor-social-icon-steam{background-color:#00adee}.elementor-social-icon-stumbleupon{background-color:#eb4924}.elementor-social-icon-telegram{background-color:#2ca5e0}.elementor-social-icon-thumb-tack{background-color:#1aa1d8}.elementor-social-icon-tripadvisor{background-color:#589442}.elementor-social-icon-tumblr{background-color:#35465c}.elementor-social-icon-twitch{background-color:#6441a5}.elementor-social-icon-twitter{background-color:#1da1f2}.elementor-social-icon-viber{background-color:#665cac}.elementor-social-icon-vimeo{background-color:#1ab7ea}.elementor-social-icon-vk{background-color:#45668e}.elementor-social-icon-weibo{background-color:#dd2430}.elementor-social-icon-weixin{background-color:#31a918}.elementor-social-icon-whatsapp{background-color:#25d366}.elementor-social-icon-wordpress{background-color:#21759b}.elementor-social-icon-xing{background-color:#026466}.elementor-social-icon-yelp{background-color:#af0606}.elementor-social-icon-youtube{background-color:#cd201f}.elementor-social-icon-500px{background-color:#0099e5}.elementor-shape-rounded .elementor-icon.elementor-social-icon{border-radius:10%}.elementor-shape-circle .elementor-icon.elementor-social-icon{border-radius:50%}</style>		<div class="elementor-social-icons-wrapper elementor-grid">
+<span class="elementor-grid-item">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-17a2485" target="_blank">
+<span class="elementor-screen-only">Instagram</span>
+<i class="fab fa-instagram"></i>					</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-b3543ae elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b3543ae" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1137004" data-id="1137004" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-e07d015 elementor-widget elementor-widget-text-editor" data-id="e07d015" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.6.6 - 08-06-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<div id="footer-part-2">
+<div>
+<a href="/legal-notices"><span style="color: #ffffff;">Legal Notices</span></a>
+<div><a href="/privacy-policy"><span style="color: #ffffff;">Privacy Policy</span></a></div>
+<div><a href="/terms-of-sale"><span style="color: #ffffff;">Terms of Sale</span></a></div>
+<div>
+<a><span id="gestion-cookies-1" style="color: #ffffff;">Manage Cookies</span></a>
+<div></div>
+</div>
+</div>
+</div>						</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>		</footer>
+</div><!-- #wrap -->
+</div><!-- #outer-wrap -->
+<script>
+jQuery(document).ready(function($) {
+var homeurl = 'https://nazarconcierge.fr';
+var currentUrl = 	'https://nazarconcierge.fr/terms-of-sale'; 
+/*if(window.location.href.includes(homeurl + '/'))*/
+/*if(window.location.href == homeurl + '/')*/
+if(homeurl == currentUrl)  //Cette condition est à mettre en doublon dans le Init
+{
+console.log("****** *** *****");
+console.log(homeurl);
+console.log(currentUrl);
+var ajaxurl = 'https://nazarconcierge.fr/wp-admin/admin-ajax.php';
+function getCookie(cookieLaw) {
+var cookieArr = document.cookie.split(";");
+for(var i = 0; i < cookieArr.length; i++) {
+var cookiePair = cookieArr[i].split("=");
+if(cookieLaw == cookiePair[0].trim()) {
+return decodeURIComponent(cookiePair[1]);
+}
+}
+return null;
+}
+const postPerPageConst = 10;
+var totalInBase = -1;	
+var page = 1;
+var actualPage = getCookie('actual-page');
+var actualOrderBy = getCookie('actual-order-by');
+var actualOrder = getCookie('actual-order');
+if(actualPage != null && actualOrderBy != null && actualOrder != null)
+{
+var orderby = actualOrderBy;
+var order = actualOrder;
+var postperpage = postPerPageConst*parseInt(actualPage);
+}
+else
+{
+var orderby = "date";
+var order = "desc";
+var postperpage = postPerPageConst;	
+}
+$('#dropdown-filter-1 select option[value=' + orderby + '-' + order + '] ').prop('selected', true);
+var postTypesTemp = $("#post-types-1").text().split("~");
+var postTypes = new Array();
+postTypesTemp.forEach(el => postTypes.push(el));
+var categoryFilter = new Array();
+const urlParams = new URLSearchParams(window.location.search);
+if(urlParams.has('category'))
+{
+categoryFilter.push(new Array('category', new Array(urlParams.get('category'))));  // Modifier le premier paramètre
+//scroller au titre de filter-plugin
+}
+else
+{   var categories = $("#taxonomy-terms-1").text().split("~");
+categories.forEach(el => {
+categoryFilter.push(eval(el));
+});
+}
+//------------- Evenement 'Afficher Plus'
+$( "#afficher-plus-2" ).click(function() {
+$("#spinnerbox").css({"display":"block"});
+$.ajax({
+url: ajaxurl, 
+data: {
+'action':'charger_cards_nouveautes1',    //correspond au suffixe de 'wp_ajax_charger_cards_nouveautes1'   =>  add_action( 'wp_ajax_charger_cards_nouveautes1', 'ajax_charger_cards_nouveautes1' );
+'page' : page, 
+'postperpage' : postperpage,
+'orderby' : orderby,
+'order' : order,
+'postTypes' : postTypes,
+'categoryFilter' : categoryFilter
+},
+success:function(data) {
+console.log("********** Charger Réussi");
+$("#spinnerbox").css({"display":"none"});
+$("#row-nouveautes1-infinite").append(data);
+$('#row-nouveautes1-infinite .card').off('click');
+if(actualPage != null)
+{
+page = parseInt(actualPage) + 1;
+actualPage = null;
+postperpage = postPerPageConst;
+}
+else
+{
+page = page + 1;
+}
+$( ".image-card-1 img, .see-details-card " ).click(function() {
+var date = new Date();
+date.setTime(date.getTime() + (30*60*1000));
+document.cookie = "actual-page=" + (page-1)  + ";expires=" + date.toUTCString() + "; path=/";
+document.cookie = "actual-order-by=" + orderby  + ";expires=" + date.toUTCString() + "; path=/";
+document.cookie = "actual-order=" + order  + ";expires=" + date.toUTCString() + "; path=/";
+});
+postperpage = postPerPageConst;
+if($("#row-nouveautes1-infinite .card").length < totalInBase)
+{
+}
+else
+{
+$("#afficher-plus-2").css({"display":"none"});
+}
+},
+error: function(errorThrown){
+}
+});
+});
+//-------------------Evenement trier
+$( "#dropdown-filter-1 select" ).change(function() {
+var vals = $(this).val();
+var fields = vals.split('-');
+var newOrderby = fields[0];
+var newOrder = fields[1];
+if(newOrderby != orderby || newOrder != order)
+{
+orderby = newOrderby;
+order = newOrder;
+page = 1;
+$("#row-nouveautes1-infinite").empty();
+$("#afficher-plus-2").css({"display":"block"});
+$( "#afficher-plus-2" ).click();
+}
+});
+// ---------- Compte 
+$.ajax({
+url: ajaxurl, // Since WP 2.8 ajaxurl is always defined and points to adminajax.php
+data: {
+'action':'compter_cards_nouveautes1',
+'categoryFilter' : categoryFilter,
+'postTypes' : postTypes,
+},
+success:function(data) {
+console.log("********** Comptage Réussi");
+totalInBase = parseInt(data);
+$( "#afficher-plus-2" ).click();  //simule un click après le comptage
+}, 
+error: function(errorThrown){
+}
+});
+/* Important : Nous détruisons les cookies */
+document.cookie = 'actual-page=; Max-Age=-99999999;'; 
+document.cookie = 'actual-order-by=; Max-Age=-99999999;'; 
+document.cookie = 'actual-order=; Max-Age=-99999999;'; 
+}
+});
+</script>
+<script>
+jQuery(document).ready(function($) {
+let list1 = document.getElementById("searchBar-suggestion-list");
+$("#suggestion-close-btn").click(function() {
+$("#suggestion-box").css({"display":"none"});
+});
+$("#bloc-searchBar-1").click(function() {
+$("#suggestion-box").css({"display":"block"});
+list1.scroll({
+top: 20,
+behavior: 'smooth'
+});
+});
+$(".searchBox-items-link").on('click', function(event){
+document.cookie = 'actual-page=; Max-Age=-99999999;'; 
+document.cookie = 'actual-order-by=; Max-Age=-99999999;'; 
+document.cookie = 'actual-order=; Max-Age=-99999999;'; 
+console.log('cookie suppriméééééééé');
+});
+const urlParams = new URLSearchParams(window.location.search);	
+if(urlParams.has('categoryName'))
+{
+$catName = urlParams.get('categoryName').substring(0,25) + '...';
+$("#searchBarinput-1").text($catName);
+$('html, body').animate({ scrollTop: $("#searchBar-1").offset().top -50}, 200);
+}
+});
+</script>
+<!--googleoff: all--><div id="cookie-law-info-bar" data-nosnippet="true"><span><div class="cli-bar-container cli-style-v2"><div class="cli-bar-message">We use cookies to ensure you get the best experience on our website. If you continue to use this site, please accept the use of cookies.</div><div class="cli-bar-btn_container"><a role='button' id="cookie_action_close_header_reject" class="cookie_action_close_header_reject cli_action_button wt-cli-reject-btn" data-cli_action="reject" style="margin:0px 15px 0px 0px">Reject All</a><span id="preference-cookie-1"><a role='button' class="cli_settings_button" style="margin:0px 15px 0px 0px">Settings</a></span><a id="wt-cli-accept-all-btn" role='button' data-cli_action="accept_all" class="wt-cli-element cli-plugin-main-button wt-cli-accept-all-btn cookie_action_close_header cli_action_button">Accept All</a></div></div></span></div><div id="cookie-law-info-again" data-nosnippet="true"><span id="cookie_hdr_showagain">Manage consent</span></div><div class="cli-modal" data-nosnippet="true" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
+<div class="cli-modal-dialog" role="document">
+<div class="cli-modal-content cli-bar-popup">
+<button type="button" class="cli-modal-close" id="cliModalClose">
+<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+<span class="wt-cli-sr-only">Fermer</span>
+</button>
+<div class="cli-modal-body">
+<div class="cli-container-fluid cli-tab-container">
+<div class="cli-row">
+<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+<div class="cli-privacy-overview">
+<h4>Privacy Overview</h4>				<div class="cli-privacy-content">
+<div class="cli-privacy-content-text">This website uses cookies to improve your experience while you navigate through the website. Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may affect your browsing experience.</div>
+</div>
+<a class="cli-privacy-readmore" aria-label="Voir plus" role="button" data-readmore-text="Voir plus" data-readless-text="Voir moins"></a>			</div>
+</div>
+<div class="cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container">
+<div class="cli-tab-section">
+<div class="cli-tab-header">
+<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="necessary" data-toggle="cli-toggle-tab">
+Necessary							</a>
+<div class="wt-cli-necessary-checkbox">
+<input type="checkbox" class="cli-user-preference-checkbox"  id="wt-cli-checkbox-necessary" data-id="checkbox-necessary" checked="checked"  />
+<label class="form-check-label" for="wt-cli-checkbox-necessary">Necessary</label>
+</div>
+<span class="cli-necessary-caption">Toujours activé</span>
+</div>
+<div class="cli-tab-content">
+<div class="cli-tab-pane cli-fade" data-id="necessary">
+<div class="wt-cli-cookie-description">
+Necessary cookies are absolutely essential for the website to function properly. These cookies ensure basic functionalities and security features of the website, anonymously.
+<table class="cookielawinfo-row-cat-table cookielawinfo-winter"><thead><tr><th class="cookielawinfo-column-1">Cookie</th><th class="cookielawinfo-column-3">Durée</th><th class="cookielawinfo-column-4">Description</th></tr></thead><tbody><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">actual-order</td><td class="cookielawinfo-column-3">30 minutes</td><td class="cookielawinfo-column-4">This cookie stores the filter type of the service section when the user clicks to see the Service Details. Thus when he wants to go back to the main page, the exact type of filter is displayed to him.</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">actual-order-by</td><td class="cookielawinfo-column-3">30 minutes</td><td class="cookielawinfo-column-4">This cookie stores the filter order of the service section when the user clicks to see the Service Details. Thus when he wants to go back to the main page, the exact filter order is displayed to him.</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">actual-page</td><td class="cookielawinfo-column-3">30 minutes</td><td class="cookielawinfo-column-4">[Google] This cookie stores the page number of the service section when user clicks to see the Service Details. Thus when he wants to go back to the main page, the exact page is displayed to him. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">consentExpiration</td><td class="cookielawinfo-column-3">12 months</td><td class="cookielawinfo-column-4">This cookie store the date of the consent when the user has done the consent.</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-advertisement</td><td class="cookielawinfo-column-3">session</td><td class="cookielawinfo-column-4">Set by the GDPR Cookie Consent plugin, this cookie is used to record the user consent for the cookies in the "Advertisement" category .</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-analytics</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Analytics".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-functional</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by GDPR cookie consent to record the user consent for the cookies in the category "Functional".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-necessary</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookies is used to store the user consent for the cookies in the category "Necessary".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-others</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Other.</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-performance</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Performance".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">CookieLawInfoConsent</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by the GDPR Cookie Consent plugin and is used to store whether or not user has consented to the use of cookies. It does not store any personal data.</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">viewed_cookie_policy</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by the GDPR Cookie Consent plugin and is used to store whether or not user has consented to the use of cookies. It does not store any personal data.</td></tr></tbody></table>								</div>
+</div>
+</div>
+</div>
+<div class="cli-tab-section">
+<div class="cli-tab-header">
+<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="functional" data-toggle="cli-toggle-tab">
+Functional							</a>
+<div class="cli-switch">
+<input type="checkbox" id="wt-cli-checkbox-functional" class="cli-user-preference-checkbox"  data-id="checkbox-functional" />
+<label for="wt-cli-checkbox-functional" class="cli-slider" data-cli-enable="Activé" data-cli-disable="Désactivé"><span class="wt-cli-sr-only">Functional</span></label>
+</div>
+</div>
+<div class="cli-tab-content">
+<div class="cli-tab-pane cli-fade" data-id="functional">
+<div class="wt-cli-cookie-description">
+Functional cookies help to perform certain functionalities like sharing the content of the website on social media platforms, collect feedbacks, and other third-party features.
+<table class="cookielawinfo-row-cat-table cookielawinfo-winter"><thead><tr><th class="cookielawinfo-column-1">Cookie</th><th class="cookielawinfo-column-3">Durée</th><th class="cookielawinfo-column-4">Description</th></tr></thead><tbody><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">SEARCH_SAMESITE</td><td class="cookielawinfo-column-3">6 months</td><td class="cookielawinfo-column-4">[Google] This cookie is used to prevent Google Cookies from being used across multiple sites. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr></tbody></table>								</div>
+</div>
+</div>
+</div>
+<div class="cli-tab-section">
+<div class="cli-tab-header">
+<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="performance" data-toggle="cli-toggle-tab">
+Performance							</a>
+<div class="cli-switch">
+<input type="checkbox" id="wt-cli-checkbox-performance" class="cli-user-preference-checkbox"  data-id="checkbox-performance" />
+<label for="wt-cli-checkbox-performance" class="cli-slider" data-cli-enable="Activé" data-cli-disable="Désactivé"><span class="wt-cli-sr-only">Performance</span></label>
+</div>
+</div>
+<div class="cli-tab-content">
+<div class="cli-tab-pane cli-fade" data-id="performance">
+<div class="wt-cli-cookie-description">
+Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+</div>
+</div>
+</div>
+</div>
+<div class="cli-tab-section">
+<div class="cli-tab-header">
+<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="analytics" data-toggle="cli-toggle-tab">
+Analytics							</a>
+<div class="cli-switch">
+<input type="checkbox" id="wt-cli-checkbox-analytics" class="cli-user-preference-checkbox"  data-id="checkbox-analytics" />
+<label for="wt-cli-checkbox-analytics" class="cli-slider" data-cli-enable="Activé" data-cli-disable="Désactivé"><span class="wt-cli-sr-only">Analytics</span></label>
+</div>
+</div>
+<div class="cli-tab-content">
+<div class="cli-tab-pane cli-fade" data-id="analytics">
+<div class="wt-cli-cookie-description">
+Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc.
+<table class="cookielawinfo-row-cat-table cookielawinfo-winter"><thead><tr><th class="cookielawinfo-column-1">Cookie</th><th class="cookielawinfo-column-3">Durée</th><th class="cookielawinfo-column-4">Description</th></tr></thead><tbody><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">AEC</td><td class="cookielawinfo-column-3">Session</td><td class="cookielawinfo-column-4">[Google] Allows user traffic to be analyzed by generating an anonymous user ID that is used to measure how many times a user visits the Site. Likewise, it records when was the first and last time you visited the Web, when a session was terminated and the origin of the user. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">DV</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] These cookies are used to collect information about how visitors use the Site and use the information to compile reports and to help improve the Site. The cookies collect information in an anonymous form, including the number of visitors to the Site, where visitors have come to the Site from and the pages they visited. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">HSID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] uses these cookies based on recent searches, in order to improve its advertising service on its sites. These cookies collect statistical information on the number and behavior of users visiting the site and their preferences. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">NID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] uses these cookies based on recent searches, in order to improve its advertising service on its sites. These cookies collect statistical information on the number and behavior of users visiting the site and their preferences. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">OTZ</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] uses these cookies based on recent searches, in order to improve its advertising service on its sites. These cookies collect statistical information on the number and behavior of users visiting the site and their preferences. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">SID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] This cookie confirms visitor authenticity, prevent illegal use of login data and protect visitor data from unauthorized access. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">SSID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] uses these cookies based on recent searches, in order to improve its advertising service on its sites. These cookies collect statistical information on the number and behavior of users visiting the site and their preferences. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr></tbody></table>								</div>
+</div>
+</div>
+</div>
+<div class="cli-tab-section">
+<div class="cli-tab-header">
+<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="advertisement" data-toggle="cli-toggle-tab">
+Advertisement							</a>
+<div class="cli-switch">
+<input type="checkbox" id="wt-cli-checkbox-advertisement" class="cli-user-preference-checkbox"  data-id="checkbox-advertisement" />
+<label for="wt-cli-checkbox-advertisement" class="cli-slider" data-cli-enable="Activé" data-cli-disable="Désactivé"><span class="wt-cli-sr-only">Advertisement</span></label>
+</div>
+</div>
+<div class="cli-tab-content">
+<div class="cli-tab-pane cli-fade" data-id="advertisement">
+<div class="wt-cli-cookie-description">
+Advertisement cookies are used to provide visitors with relevant ads and marketing campaigns. These cookies track visitors across websites and collect information to provide customized ads.
+<table class="cookielawinfo-row-cat-table cookielawinfo-winter"><thead><tr><th class="cookielawinfo-column-1">Cookie</th><th class="cookielawinfo-column-3">Durée</th><th class="cookielawinfo-column-4">Description</th></tr></thead><tbody><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">__Secure-1PAPISID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] This cookie stores information of the visitors interest to show relevant and personalized ads through retargeting. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">__Secure-1PSID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] This cookie stores information of the visitors interest to show relevant and personalized ads through retargeting. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">__Secure-1PSIDCC</td><td class="cookielawinfo-column-3">12 months</td><td class="cookielawinfo-column-4">[Google] This cookie is used for advertising purposes. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">__Secure-3PAPISID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] This cookie stores information of the visitors interest to show relevant and personalized ads through retargeting. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">__Secure-3PSID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] This cookie stores information of the visitors interest to show relevant and personalized ads through retargeting. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">__Secure-3PSIDCC</td><td class="cookielawinfo-column-3">12 months</td><td class="cookielawinfo-column-4">[Google] This cookie is used for advertising purposes. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">__Secure-ENID</td><td class="cookielawinfo-column-3">2 years</td><td class="cookielawinfo-column-4">[Google] This cookie allows you to customize how ads are seen outside of Google or store information like your preferred language.
+See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">APISID</td><td class="cookielawinfo-column-3">12 months</td><td class="cookielawinfo-column-4">[Google] This cookie is used to improve your user experience when you are logged in Google and allows you to stay connected to your Google Account. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">CONSENT</td><td class="cookielawinfo-column-3">13 months</td><td class="cookielawinfo-column-4">[Google] This cookie is used to save your cookie choices and remains active for 13 months. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">SAPISID</td><td class="cookielawinfo-column-3">12 months</td><td class="cookielawinfo-column-4">[Google] This cookie is used to improve your user experience when you are logged in Google and allows you to stay connected to your Google Account. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">SIDCC</td><td class="cookielawinfo-column-3">3 months</td><td class="cookielawinfo-column-4">[Google] This cookie gives information on how the user uses the website and on the advertising he may have seen before visiting the site. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">SOCS</td><td class="cookielawinfo-column-3">13 months</td><td class="cookielawinfo-column-4">[Google] This cookie is used to save your cookie choices and remains active for 13 months. See the Google Policy : https://policies.google.com/technologies/cookies?hl=en</td></tr></tbody></table>								</div>
+</div>
+</div>
+</div>
+<div class="cli-tab-section">
+<div class="cli-tab-header">
+<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="others" data-toggle="cli-toggle-tab">
+Others							</a>
+<div class="cli-switch">
+<input type="checkbox" id="wt-cli-checkbox-others" class="cli-user-preference-checkbox"  data-id="checkbox-others" />
+<label for="wt-cli-checkbox-others" class="cli-slider" data-cli-enable="Activé" data-cli-disable="Désactivé"><span class="wt-cli-sr-only">Others</span></label>
+</div>
+</div>
+<div class="cli-tab-content">
+<div class="cli-tab-pane cli-fade" data-id="others">
+<div class="wt-cli-cookie-description">
+Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cli-modal-footer">
+<div class="wt-cli-element cli-container-fluid cli-tab-container">
+<div class="cli-row">
+<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+<div class="cli-tab-footer wt-cli-privacy-overview-actions">
+<a id="wt-cli-privacy-save-btn" role="button" tabindex="0" data-cli-action="accept" class="wt-cli-privacy-btn cli_setting_save_button wt-cli-privacy-accept-btn cli-btn">Enregistrer &amp; appliquer</a>
+</div>
+<div class="wt-cli-ckyes-footer-section">
+<div class="wt-cli-ckyes-brand-logo">Propulsé par <a href="https://www.cookieyes.com/"><img src="https://nazarconcierge.fr/wp-content/plugins/cookie-law-info/public/images/logo-cookieyes.svg" alt="CookieYes Logo"></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<!--googleon: all--><!-- <link rel='stylesheet' id='cookie-law-info-table-css'  href='https://nazarconcierge.fr/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-table.css?ver=2.1.2' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//nazarconcierge.fr/wp-content/cache/wpfc-minified/70azjbzh/fh3xw.css" media="all"/>
+<script src='https://nazarconcierge.fr/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+<script id='oceanwp-main-js-extra'>
+var oceanwpLocalize = {"nonce":"afaf561ec2","isRTL":"","menuSearchStyle":"disabled","mobileMenuSearchStyle":"disabled","sidrSource":null,"sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","ajax_url":"https:\/\/nazarconcierge.fr\/wp-admin\/admin-ajax.php"};
+</script>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/theme.min.js?ver=3.3.3' id='oceanwp-main-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/drop-down-mobile-menu.min.js?ver=3.3.3' id='oceanwp-drop-down-mobile-menu-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/vendors/magnific-popup.min.js?ver=3.3.3' id='ow-magnific-popup-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/ow-lightbox.min.js?ver=3.3.3' id='oceanwp-lightbox-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/vendors/flickity.pkgd.min.js?ver=3.3.3' id='ow-flickity-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/ow-slider.min.js?ver=3.3.3' id='oceanwp-slider-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/scroll-effect.min.js?ver=3.3.3' id='oceanwp-scroll-effect-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/select.min.js?ver=3.3.3' id='oceanwp-select-js'></script>
+<!--[if lt IE 9]>
+<script src='https://nazarconcierge.fr/wp-content/themes/oceanwp/assets/js/third/html5.min.js?ver=3.3.3' id='html5shiv-js'></script>
+<![endif]-->
+<script src='https://nazarconcierge.fr/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.6.6' id='elementor-webpack-runtime-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.6.6' id='elementor-frontend-modules-js'></script>
+<script src='https://nazarconcierge.fr/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script src='https://nazarconcierge.fr/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js'></script>
+<script id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Partager sur Facebook","shareOnTwitter":"Partager sur Twitter","pinIt":"L\u2019\u00e9pingler","download":"T\u00e9l\u00e9charger","downloadImage":"T\u00e9l\u00e9charger une image","fullscreen":"Plein \u00e9cran","zoom":"Zoom","share":"Partager","playVideo":"Lire la vid\u00e9o","previous":"Pr\u00e9c\u00e9dent","next":"Suivant","close":"Fermer"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Grand mobile","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablette","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Grande tablette","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Portable","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"\u00c9cran large","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.6.6","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"e_import_export":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true},"urls":{"assets":"https:\/\/nazarconcierge.fr\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":496,"title":"Terms%20of%20Sale%20-%20Nazar%20Concierge","excerpt":"","featuredImage":false}};
+</script>
+<script src='https://nazarconcierge.fr/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.6.6' id='elementor-frontend-js'></script>
+<script>
+jQuery(document).ready(function($) {
+});
+</script>
+<script>
+//COOKIES
+jQuery(document).ready(function($) {
+/*---------Affiche la barre de cookie au clique sur 'Gestion des Cookies' -------------------------------*/
+$( "#gestion-cookies-1" ).click(function() {
+event.preventDefault();
+$( "#cookie-law-info-again" ).click();
+});
+/*---------------------Forcing de l'application des cookies----------------------------------------------*/
+function getCookie(cookieLaw) {
+var cookieArr = document.cookie.split(";");
+for(var i = 0; i < cookieArr.length; i++) {
+var cookiePair = cookieArr[i].split("=");
+if(cookieLaw == cookiePair[0].trim()) {
+return decodeURIComponent(cookiePair[1]);
+}
+}
+return null;
+}
+//A chaque clique manuel vers un consentement, on enregistre l'expiration dans un cookie nommé 'consentExpiration' 
+//Il servira a conserver la date lorsque dans la suite du code on force/simule le clique de consentement.. 
+//cette manoeuvre entraine en effet un retardement de la date d'expiration de manière artificielle
+var consentExp = getCookie('consentExpiration');
+//Si le cookie n'existe pas, on le crée
+if(consentExp == null)
+{
+$( "#cookie_action_close_header_reject, #wt-cli-accept-all-btn, #wt-cli-privacy-save-btn  " ).click(function() {
+var CookieDate = new Date;
+CookieDate.setFullYear(CookieDate.getFullYear() +1);
+document.cookie = 'consentExpiration=' + CookieDate.toUTCString() + '; expires=' + CookieDate.toUTCString() + ';'
+});
+}
+//Ce code permet de : 1) soit forcer l'application des préférences s'ils ont déja été fixés,
+// 2) Soit de forcer la suppression de certains cookie si le consentement n'a pas été fait
+var viewedCookiePolicy = getCookie("viewed_cookie_policy");
+if(viewedCookiePolicy != null)
+{
+// 1) on force l'application des préférences
+$( "#wt-cli-privacy-save-btn" ).click();
+console.log("***** forcing effectué");
+//On remet la date d'expiration initiale de 'viewed_cookie_policy' et 'CookieLawInfoConsent' 
+//(en se basant sur la valeur de 'consentExpiration')
+var consent = getCookie("consentExpiration");
+if(consent != null)
+{
+console.log(consent);
+document.cookie = 'viewed_cookie_policy=' + viewedCookiePolicy + '; expires=' + consent + ';'
+var cookieLawInfoConsent = getCookie("CookieLawInfoConsent");
+if(cookieLawInfoConsent != null)
+{
+document.cookie = 'CookieLawInfoConsent=' + cookieLawInfoConsent + '; expires=' + consent + ';'
+}
+}
+}
+else
+{
+// 2)suppression de certains cookie si le consentement n'a pas été fait
+/*setTimeout(function() {},5000);*/
+document.cookie = 'CONSENT=; Max-Age=-99999999;'; 
+document.cookie = 'SOCS=; Max-Age=-99999999;'; 
+document.cookie = 'SAPISID=; Max-Age=-99999999;'; 
+document.cookie = 'APISID=; Max-Age=-99999999;'; 
+document.cookie = '__Secure-ENID=; Max-Age=-99999999;'; 
+document.cookie = '__Secure-3PSIDCC=; Max-Age=-99999999;'; 
+document.cookie = '__Secure-1PSIDCC=; Max-Age=-99999999;'; 
+document.cookie = 'SIDCC=; Max-Age=-99999999;'; 
+document.cookie = '_Secure-3PAPISID=; Max-Age=-99999999;'; 
+document.cookie = '__Secure-3PSID=; Max-Age=-99999999;'; 
+document.cookie = '__Secure-1PAPISID=; Max-Age=-99999999;'; 
+document.cookie = '__Secure-1PSID=; Max-Age=-99999999;'; 
+document.cookie = 'AEC=; Max-Age=-99999999;'; 
+document.cookie = 'DV=; Max-Age=-99999999;'; 
+document.cookie = 'SID=; Max-Age=-99999999;'; 
+document.cookie = 'SSID=; Max-Age=-99999999;'; 
+document.cookie = 'HSID=; Max-Age=-99999999;'; 
+document.cookie = 'NID=; Max-Age=-99999999;'; 
+document.cookie = 'OTZ=; Max-Age=-99999999;'; 
+document.cookie = 'SEARCH_SAMESITE=; Max-Age=-99999999;'; 
+}
+console.log("************************ JS de utils terminé")
+//$( "#wt-cli-privacy-save-btn" ).click();
+});
+</script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.28184199333191 seconds, on 26-07-22 9:52:31 -->
